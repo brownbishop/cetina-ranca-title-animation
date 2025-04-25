@@ -181,7 +181,7 @@ Sections animate in and out on scroll. Scroll up or down and the sections will w
     <!-- partial -->
     <script src='https://assets.codepen.io/16327/gsap-latest-beta.min.js'></script>
     <script src='https://assets.codepen.io/16327/Observer.min.js'></script>
-    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js'></script>
+    <!-- <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js'></script> -->
     <script>
         gsap.registerPlugin(Observer);
 
@@ -190,8 +190,8 @@ Sections animate in and out on scroll. Scroll up or down and the sections will w
             headings = gsap.utils.toArray(".section-heading"),
             outerWrappers = gsap.utils.toArray(".outer"),
             innerWrappers = gsap.utils.toArray(".inner"),
-            splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" })),
-            // splitHeadings = headings,
+            // splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" })),
+            splitHeadings = headings,
             currentIndex = -1,
             wrap = gsap.utils.wrap(0, sections.length),
             animating;
